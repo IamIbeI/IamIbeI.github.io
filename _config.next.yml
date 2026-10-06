@@ -1,0 +1,35 @@
+# NexT theme overrides for a quiet, writing-focused personal site.
+scheme: Gemini
+
+menu:
+  home: / || fa fa-home
+  archives: /archives/ || fa fa-archive
+  categories: /categories/ || fa fa-th
+  tags: /tags/ || fa fa-tags
+
+sidebar:
+  position: left
+  display: post
+
+toc:
+  enable: true
+  number: true
+  wrap: true
+  expand_all: false
+  max_depth: 4
+
+motion:
+  enable: false
+
+back2top:
+  enable: true
+  sidebar: false
+  scrollpercent: true
+
+reading_progress:
+  enable: true
+  start_at: left
+  position: top
+  reversed: false
+  color: "#555"
+  height: 2px
