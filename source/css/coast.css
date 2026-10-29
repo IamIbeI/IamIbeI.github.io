@@ -1,0 +1,123 @@
+/* Coast journal: sky, sand, warm paper and vermilion calligraphy. */
+:root, [data-theme='light'], [data-theme='dark'] {
+  --global-bg: #faf7f0;
+  --card-bg: #fffdf8;
+  --font-color: #514b43;
+  --text-highlight-color: #332e28;
+  --card-meta: #8b8174;
+  --hr-border: #e4d7c5;
+  --hr-before-color: #b78b54;
+  --sidebar-bg: #fffdf8;
+  --sidebar-menu-bg: #f3ebdd;
+  --toc-link-color: #756b5e;
+  --blockquote-bg: #f5eddf;
+  --blockquote-color: #74634b;
+  --card-box-shadow: 0 8px 28px rgba(112, 86, 48, .045);
+  --card-hover-box-shadow: 0 10px 32px rgba(112, 86, 48, .08);
+  --btn-bg: #b63f30;
+  --btn-color: #fffdf8;
+}
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Microsoft YaHei', sans-serif; }
+::selection { background: #ecd8bb; color: #332e28; }
+#page-header.full_page {
+  height: calc(100vw / 2.4 + 64px);
+  min-height: 0;
+  max-height: none;
+  background-color: #faf7f0;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-attachment: scroll;
+  border-bottom: 0;
+}
+#page-header.full_page::before {
+  content: '';
+  position: absolute;
+  inset: 64px 0 0;
+  width: 100%;
+  height: auto;
+  pointer-events: none;
+  background: linear-gradient(to bottom,
+    rgba(250, 247, 240, .16) 0%,
+    rgba(250, 247, 240, .14) 55%,
+    rgba(250, 247, 240, .24) 76%,
+    rgba(250, 247, 240, .62) 91%,
+    #faf7f0 100%);
+}
+#page-header.full_page #site-info, #page-header.full_page #scroll-down { display: none; }
+#page-header #nav, #page-header.nav-fixed #nav,
+#page-header.not-top-img #nav, #page-header.full_page #nav {
+  height: 64px;
+  padding: 0 5%;
+  background: rgba(255, 253, 248, .97);
+  box-shadow: 0 1px 0 #e9dfd0;
+  backdrop-filter: blur(12px);
+}
+#nav #blog-info a, #nav .site-page, #nav #toggle-menu, #nav #nav-totop,
+#nav #toggle-menu .site-page, #nav a, #page-header.nav-fixed #nav a {
+  color: #514b43;
+  text-shadow: none;
+}
+#nav #blog-info a { font-family: Georgia, 'Songti SC', SimSun, serif; font-size: 24px; letter-spacing: .025em; }
+#nav .menus_item { margin-left: 24px; }
+#nav .site-page { font-size: 14px; letter-spacing: .08em; }
+#nav .site-page:hover, #nav a:hover { color: #b63f30; }
+#nav .menus_item a::after { background: #b63f30; }
+.layout { max-width: 1240px; padding: 48px 24px 64px; }
+#recent-posts::before {
+  content: '沿途的记录';
+  display: block;
+  margin: 0 0 24px 2px;
+  padding-left: 14px;
+  border-left: 3px solid #b63f30;
+  font-family: Georgia, 'Songti SC', SimSun, serif;
+  font-size: 26px;
+  line-height: 1.3;
+  letter-spacing: .12em;
+  color: #4b4033;
+}
+#recent-posts > .recent-post-item, #aside-content .card-widget,
+.layout > div:first-child:not(.recent-posts) {
+  border: 1px solid #e9dfcf;
+  border-radius: 12px;
+  box-shadow: var(--card-box-shadow);
+}
+#recent-posts > .recent-post-item { height: auto; min-height: 205px; margin-bottom: 24px; transition: border-color .25s, transform .25s; }
+#recent-posts > .recent-post-item:hover { border-color: #d0b38a; transform: translateY(-3px); }
+#recent-posts > .recent-post-item > .recent-post-info { padding: 32px 38px; width: 100%; }
+#recent-posts > .recent-post-item > .recent-post-info > .article-title {
+  font-family: Georgia, 'Songti SC', SimSun, serif;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 1.55;
+  color: #3c352e;
+}
+#recent-posts > .recent-post-item > .recent-post-info > .article-title:hover { color: #b63f30; }
+#recent-posts > .recent-post-item > .recent-post-info > .article-meta-wrap { color: #8d8273; font-size: 12px; margin: 10px 0; }
+#recent-posts > .recent-post-item > .recent-post-info > .content { color: #796e60; font-size: 14px; line-height: 1.95; }
+#aside-content .card-info { background: linear-gradient(160deg, #fffdf8 30%, #f2e6d2); padding-top: 30px; }
+#aside-content .avatar-img { width: 108px; height: 108px; border: 4px solid #fffdf8; border-radius: 50%; box-shadow: 0 0 0 1px #dcc8aa; }
+#aside-content .avatar-img img { width: 100%; height: 100%; object-fit: cover; }
+#aside-content .card-info .author-info-name { margin-top: 10px; font-family: Georgia, serif; letter-spacing: .04em; color: #4b4033; }
+#aside-content .card-info .author-info-description { color: #857460; font-size: 13px; }
+#aside-content .card-info #card-info-btn { margin-top: 20px; border-radius: 7px; background: #b63f30; color: #fffdf8; }
+#aside-content .card-info #card-info-btn:hover { background: #953024; }
+#aside-content .item-headline { color: #61513e; }
+#aside-content .item-headline i { color: #b08a53; }
+#aside-content .aside-list-item .title { color: #635647; }
+#footer { background: #f0e6d6; border-top: 1px solid #e3d3bb; }
+#footer-wrap, #footer-wrap a { color: #7c6b53; }
+#rightside > div > button { background: #b78b54; border-radius: 6px; }
+#article-container { line-height: 2; }
+#article-container h2, #article-container h3 { font-family: Georgia, 'Songti SC', SimSun, serif; }
+@media (max-width: 768px) {
+  .layout { padding: 28px 14px 40px; }
+  #recent-posts::before { font-size: 22px; margin-bottom: 20px; }
+  #recent-posts > .recent-post-item { min-height: 0; }
+  #recent-posts > .recent-post-item > .recent-post-info { padding: 26px 24px; }
+  #recent-posts > .recent-post-item > .recent-post-info > .article-title { font-size: 21px; }
+  #aside-content { margin-top: 24px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}
