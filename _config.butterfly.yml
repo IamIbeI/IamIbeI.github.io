@@ -1,0 +1,72 @@
+# Overrides kept outside node_modules so upgrades retain the design.
+nav:
+  fixed: true
+menu:
+  首页: / || fas fa-home
+  归档: /archives/ || fas fa-archive
+  分类: /categories/ || fas fa-folder-open
+  标签: /tags/ || fas fa-tags
+display_mode: dark
+darkmode:
+  enable: true
+  button: true
+  autoChangeMode: false
+index_img: /images/orbit.svg
+default_top_img: /images/orbit.svg
+avatar:
+  img: /images/profile-avatar.png
+  effect: false
+favicon: /images/avatar.svg
+cover:
+  default_cover:
+    - /images/orbit.svg
+index_layout: 3
+index_post_content:
+  method: 3
+  length: 160
+subtitle:
+  enable: true
+  effect: false
+  source: false
+  sub:
+    - 记录思考 · 探索技术 · 保持好奇
+social:
+  fab fa-github: https://github.com/IamIbeI || GitHub
+aside:
+  card_author:
+    description: 在这里，留下探索与成长的轨迹。
+    button:
+      enable: true
+      icon: fab fa-github
+      text: GitHub
+      link: https://github.com/IamIbeI
+  card_announcement:
+    enable: false
+  card_webinfo:
+    enable: false
+code_blocks:
+  theme: pale night
+  macStyle: true
+  copy: true
+  language: true
+theme_color:
+  enable: true
+  main: '#70a5ff'
+  paginator: '#70a5ff'
+  scroll: '#70a5ff'
+  text_selection: '#3458a0'
+  meta_theme_color_dark: '#0b1020'
+footer:
+  owner:
+    since: 2026
+  custom_text: 保持好奇，持续生长。
+busuanzi:
+  site_uv: false
+  site_pv: false
+  page_pv: false
+share:
+  use:
+rightside_scroll_percent: true
+inject:
+  head:
+    - <link rel="stylesheet" href="/css/orbit.css">

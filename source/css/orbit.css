@@ -1,0 +1,26 @@
+:root { --orbit-accent: #8ec8ff; }
+[data-theme='dark'] { --global-bg: #0b1020; --card-bg: #121b2e; --font-color: #c7d3e6; --text-highlight-color: #eef5ff; --hr-border: #283954; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Microsoft YaHei', sans-serif; }
+#page-header.full_page { height: 72vh; min-height: 480px; max-height: 800px; background-position: center; }
+#page-header::before { background: linear-gradient(90deg, rgba(5,11,25,.3), transparent); }
+#page-header #site-info { text-align: left; top: 36%; left: max(8%, calc((100vw - 1180px)/2)); right: 8%; width: auto; }
+#site-title { font-size: clamp(3rem, 6vw, 5.5rem) !important; letter-spacing: -.04em; line-height: 1.15; }
+#site-info #site-title, #site-info #site-subtitle, #site-info #site_social_icons { text-align: left; }
+#site-info::before { content: 'NOTES / IDEAS / EXPLORATION'; display: block; color: #99c9f1; font-size: 12px; letter-spacing: .3em; margin-bottom: 24px; }
+#site-subtitle { margin-top: 20px; font-size: 1.1rem !important; letter-spacing: .16em; color: #c5d7ed; }
+#site_social_icons { margin-top: 22px; }
+#nav { padding-left: 5%; padding-right: 5%; }
+#nav .site-page { letter-spacing: .06em; }
+[data-theme='dark'] #nav.nav-fixed { background: rgba(11,16,32,.92); backdrop-filter: blur(16px); }
+.layout { max-width: 1280px; padding-top: 40px; }
+#recent-posts > .recent-post-item, #aside-content .card-widget, .layout > div:first-child:not(.recent-posts) { border: 1px solid rgba(120,155,211,.14); border-radius: 18px; box-shadow: 0 10px 35px rgba(0,0,0,.08); }
+#recent-posts > .recent-post-item { transition: transform .25s, border-color .25s; }
+#recent-posts > .recent-post-item:hover { transform: translateY(-4px); border-color: #526d9b; }
+#recent-posts > .recent-post-item .post_cover img { object-position: 75% center; }
+#recent-posts > .recent-post-item > .recent-post-info > .article-title { line-height: 1.5; font-weight: 600; }
+#aside-content .card-info .author-info-name { letter-spacing: .04em; }
+#aside-content .card-info #card-info-btn { border-radius: 9px; background: #294e86; }
+#footer { background: #0b1020; border-top: 1px solid rgba(120,155,211,.14); }
+#footer-wrap { color: #8a9db9; }
+@media (max-width: 768px) { #page-header.full_page { height: 64vh; min-height: 420px; } #page-header #site-info { left: 7%; top: 35%; } #site-info::before { letter-spacing: .18em; font-size: 10px; } #site-subtitle { font-size: .9rem !important; letter-spacing: .06em; } .layout { padding-top: 22px; } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; } }
