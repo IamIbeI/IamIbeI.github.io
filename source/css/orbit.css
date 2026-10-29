@@ -24,3 +24,18 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Microsoft Ya
 #footer-wrap { color: #8a9db9; }
 @media (max-width: 768px) { #page-header.full_page { height: 64vh; min-height: 420px; } #page-header #site-info { left: 7%; top: 35%; } #site-info::before { letter-spacing: .18em; font-size: 10px; } #site-subtitle { font-size: .9rem !important; letter-spacing: .06em; } .layout { padding-top: 22px; } }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; } }
+/* Preserve the complete approved banner, including both calligraphy phrases. */
+#page-header.full_page {
+  height: calc(100vw / 2.4 + 60px);
+  min-height: 0;
+  max-height: none;
+  background-color: #0b1020;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-attachment: scroll;
+}
+#page-header.full_page::before { background: none; }
+#page-header.full_page #site-info,
+#page-header.full_page #scroll-down { display: none; }
+#page-header.full_page #nav { background: #0b1020; }

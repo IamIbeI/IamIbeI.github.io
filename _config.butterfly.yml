@@ -11,7 +11,7 @@ darkmode:
   enable: true
   button: true
   autoChangeMode: false
-index_img: /images/orbit.svg
+index_img: /images/youth-you-and-me.png
 default_top_img: /images/orbit.svg
 avatar:
   img: /images/profile-avatar.png
