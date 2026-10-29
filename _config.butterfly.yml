@@ -59,8 +59,11 @@ theme_color:
   meta_theme_color_light: '#faf7f0'
 footer:
   owner:
+    enable: false
     since: 2026
-  custom_text: 保持好奇，持续生长。
+  copyright:
+    enable: false
+  custom_text: 快乐小子，爱说段子
 busuanzi:
   site_uv: false
   site_pv: false
